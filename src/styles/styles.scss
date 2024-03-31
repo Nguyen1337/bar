@@ -2,7 +2,7 @@
 
 // font-family: "Cormorant Upright", serif;
 
-@import "_variables", "_mixins", "_globals";
+@import "_media", "_variables", "_mixins", "_globals";
 
 body {
   background-color: $color-dark;
@@ -11,11 +11,13 @@ body {
   line-height: 175%;
   color: $color-accent;
   letter-spacing: 0.04em;
-  font-variant-numeric: lining-nums !important;
 }
 
 * {
   font-variant-numeric: lining-nums !important;
+  font-feature-settings: "pnum" on, "lnum" on !important;
+  -webkit-font-feature-settings: "pnum" on, "lnum" on !important;
+  -moz-font-feature-settings: "pnum=1", "lnum=1" !important;
 }
 
 h1,
@@ -57,6 +59,14 @@ h6 {
     justify-content: space-between;
     align-items: center;
     padding-block: 32px;
+
+    @include tablet {
+      padding-block: 20px;
+    }
+
+    @include mobile {
+      padding-block: 10px;
+    }
   }
 
   &__logo a {
@@ -66,9 +76,21 @@ h6 {
     text-transform: uppercase;
     color: $color-light;
     font-family: $font-family-accent;
+
+    @include tablet {
+      font-size: 32px;
+    }
+
+    @include mobile {
+      font-size: 28px;
+    }
   }
 
   &__nav {
+    @include desktop {
+      display: none;
+    }
+
     &-list {
       display: flex;
       align-items: center;
@@ -88,6 +110,10 @@ h6 {
   &__buttons {
     display: flex;
     align-items: center;
+
+    @include desktop {
+      display: none;
+    }
   }
 
   &__button {
@@ -112,13 +138,12 @@ h6 {
   }
 
   &__line {
-    width: 57px;
-    height: 1px;
-    transform: rotate(90deg);
+    width: 1px;
+    height: 57px;
     background-image: linear-gradient(
-      to right,
+      to top,
       transparent,
-      rgba(255, 255, 255, 1),
+      rgb(255, 255, 255),
       transparent
     );
   }
@@ -130,6 +155,20 @@ h6 {
     align-items: center;
     gap: 158px;
     padding-block: 48px 239px;
+
+    @include desktop {
+      gap: 30px;
+      padding-block: 40px 160px;
+    }
+
+    @include tablet {
+      justify-content: center;
+      padding-block: 30px 50px;
+    }
+
+    @include mobile {
+      padding-block: 30px 30px;
+    }
   }
 
   &__barname {
@@ -137,12 +176,26 @@ h6 {
     gap: 40px;
     writing-mode: vertical-lr;
     transform: rotate(180deg);
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__wrapper {
     display: flex;
     align-items: center;
     gap: 180px;
+
+    @include desktop {
+      gap: 30px;
+    }
+
+    @include tablet {
+      flex-direction: column-reverse;
+      text-align: center;
+      align-items: center;
+    }
   }
 
   &__subtitle {
@@ -162,6 +215,7 @@ h6 {
 
   &__title {
     margin-bottom: 32px;
+    text-transform: capitalize;
   }
 
   &__text {
@@ -199,6 +253,15 @@ h6 {
     align-items: center;
     position: relative;
 
+    @include tablet {
+      padding-block: 60px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      padding-block: 30px;
+    }
+
     &::before {
       font-weight: 700;
       transform: translate(-48%, 0%);
@@ -212,6 +275,10 @@ h6 {
       width: 391px;
       height: 415px;
       color: #272727;
+
+      @include mobile {
+        display: none;
+      }
     }
   }
 
@@ -219,13 +286,26 @@ h6 {
     max-width: 523px;
     z-index: 100;
 
+    @include mobile {
+      max-width: unset;
+      padding-inline: 20px;
+    }
+
     &:first-child {
       text-align: end;
       margin-right: 74px;
+
+      @include mobile {
+        margin-right: 0;
+      }
     }
 
     &:last-child {
       margin-left: 96px;
+
+      @include mobile {
+        margin-left: 0;
+      }
     }
   }
 
@@ -258,6 +338,18 @@ h6 {
     padding: 48px 32px;
     background-color: $color-dark-light;
     border: 1px solid rgba($color: #dcca87, $alpha: 0.2);
+
+    @include tablet {
+      margin-block: 70px;
+    }
+
+    @include mobile {
+      margin-block: 30px;
+    }
+
+    @include mobile-s {
+      margin-block: 20px;
+    }
   }
 
   &__subtitle {
@@ -271,15 +363,34 @@ h6 {
 
   &__title {
     margin-bottom: 64px;
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
   }
 
   &__forms {
     display: flex;
     justify-content: space-between;
     margin-bottom: 64px;
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
+      gap: 30px;
+      align-items: center;
+      flex-direction: column;
+    }
   }
 
-  select {
+  &__border {
     font-weight: 700;
     width: 412px;
     height: 60px;
@@ -289,6 +400,17 @@ h6 {
     font-size: 16px;
     line-height: 175%;
     border: 1px solid #f5efdb;
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+      width: 100%;
+      height: 50px;
+    }
+  }
+
+  select {
+    width: 100%;
 
     option {
       background: #272727;
@@ -311,6 +433,18 @@ h6 {
 
   &__body {
     padding-bottom: 262px;
+
+    @include tablet {
+      padding-bottom: 160px;
+    }
+
+    @include mobile {
+      padding-bottom: 60px;
+    }
+
+    @include mobile-s {
+      padding-bottom: 30px;
+    }
   }
 
   &__logo {
@@ -322,6 +456,10 @@ h6 {
       display: flex;
       flex-direction: column;
       gap: 64px;
+
+      @include mobile {
+        gap: 30px;
+      }
     }
 
     &-link {
@@ -351,6 +489,14 @@ h6 {
     max-width: 1300px;
     margin: 0 auto;
     text-align: center;
+
+    @include tablet {
+      padding-block: 70px;
+    }
+
+    @include mobile {
+      padding-block: 30px;
+    }
   }
 
   &__subtitle {
@@ -363,6 +509,18 @@ h6 {
 
   &__title {
     margin-bottom: 64px;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
+
+    @include mobile-s {
+      margin-bottom: 20px;
+    }
   }
 
   &__wrapper {
@@ -370,6 +528,18 @@ h6 {
     align-items: center;
     gap: 32px;
     margin-bottom: 64px;
+
+    @include desktop-l {
+      flex-direction: column;
+    }
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
   }
 }
 
@@ -435,6 +605,20 @@ h6 {
     align-items: center;
     gap: 96px;
     padding-block: 128px;
+
+    @include tablet {
+      padding-block: 60px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include mobile {
+      padding-block: 30px;
+    }
+
+    @include mobile-s {
+      padding-block: 20px;
+    }
   }
 
   &__image {
@@ -499,6 +683,18 @@ h6 {
     margin: 0 auto;
     padding-block: 152px;
     text-align: center;
+
+    @include tablet {
+      padding-block: 60px;
+    }
+
+    @include mobile {
+      padding-block: 30px 60px;
+    }
+
+    @include mobile-s {
+      padding-block: 20px 60px;
+    }
   }
 
   &__cap {
@@ -518,6 +714,7 @@ h6 {
     display: flex;
     flex-wrap: wrap;
     gap: 64px 32px;
+    justify-content: center;
   }
 
   &__item {
@@ -527,6 +724,11 @@ h6 {
     gap: 32px;
     max-width: 634px;
     text-align: start;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__text {
@@ -549,6 +751,14 @@ h6 {
     position: absolute;
     right: -20px;
     top: -50px;
+
+    @include mobile {
+      right: 3%;
+    }
+
+    @include mobile-s {
+      display: none;
+    }
   }
 }
 
@@ -602,9 +812,14 @@ h6 {
     max-width: 1300px;
     margin: 0 auto;
     display: flex;
-    gap: 183px;
+    gap: 50px;
     align-items: center;
     justify-content: space-between;
+
+    @include desktop {
+      flex-direction: column;
+      gap: 30px;
+    }
 
     &::after {
       content: "G";
@@ -615,6 +830,10 @@ h6 {
       font-family: $font-family-accent;
       right: 166px;
       bottom: 313px;
+
+      @include mobile {
+        right: 0;
+      }
     }
   }
 
@@ -635,6 +854,10 @@ h6 {
     display: flex;
     flex-wrap: wrap;
     gap: 64px 32px;
+
+    @include desktop {
+      display: grid;
+    }
   }
 
   &__item {
@@ -659,6 +882,14 @@ h6 {
     padding-bottom: 152px;
     max-width: 1300px;
     margin: 0 auto;
+
+    @include tablet {
+      padding-bottom: 70px;
+    }
+
+    @include mobile {
+      padding-bottom: 30px;
+    }
   }
 
   &__list {
@@ -666,12 +897,26 @@ h6 {
     justify-content: space-between;
     gap: 32px;
     margin-bottom: 64px;
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__item {
     display: flex;
     flex-direction: column;
     gap: 24px;
+
+    @include mobile {
+      align-items: center;
+      text-align: center;
+    }
 
     &-info {
       display: flex;
@@ -684,6 +929,10 @@ h6 {
     color: $color-light;
     display: flex;
     justify-content: space-between;
+
+    @include tablet {
+      justify-content: space-evenly;
+    }
   }
 
   &__title {
@@ -733,6 +982,7 @@ h6 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 
   &__background {
     background-color: rgba($color: $color-dark-light, $alpha: 0.6);
@@ -744,11 +994,28 @@ h6 {
     align-items: center;
     gap: 64px;
     margin-left: 310px;
+
+    @include tablet {
+      margin-left: 0;
+      flex-direction: column;
+      text-align: center;
+      gap: 30px;
+    }
   }
 
   &__list {
     display: flex;
     gap: 32px;
+    min-width: 967px;
+
+    @include tablet {
+      min-width: unset;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 
   &__cap {
@@ -787,6 +1054,10 @@ h6 {
         opacity: 0.4;
       }
     }
+  }
+
+  &__image {
+    min-width: 301px;
   }
 
   &__link {
@@ -830,11 +1101,21 @@ h6 {
     justify-content: center;
     gap: 32px;
 
+    @include mobile {
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+    }
+
     input {
       height: 60px;
       border: 1px solid #f5efdb;
       width: 635px;
       padding-inline: 19px;
+
+      @include mobile {
+        width: 100%;
+      }
 
       &::placeholder {
         color: $color-grey;
@@ -858,12 +1139,28 @@ h6 {
     max-width: 1300px;
     margin: 0 auto;
     text-align: center;
+
+    @include desktop {
+      padding-block: 70px;
+    }
+
+    @include tablet {
+      padding-block: 40px;
+    }
+
+    @include mobile {
+      padding-block: 30px;
+    }
   }
 
   &__list {
     display: flex;
     justify-content: space-between;
     margin-bottom: 64px;
+
+    @include desktop {
+      flex-direction: column;
+    }
   }
 
   &__logo {
@@ -885,10 +1182,19 @@ h6 {
 
     &:last-child {
       margin-left: 100px;
+
+      @include desktop {
+        order: -1;
+        margin-left: 0;
+      }
     }
 
     &-center {
       max-width: 438px;
+
+      @include desktop {
+        margin: 0 auto;
+      }
     }
   }
 

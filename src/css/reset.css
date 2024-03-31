@@ -110,5 +110,9 @@ legend {
 }
 
 option {
-  font-variant-numeric: inherit !important;
+  font-variant-numeric: lining-nums !important;
+  font-feature-settings: "pnum" on, "lnum" on !important;
+  -webkit-font-feature-settings: "pnum" on, "lnum" on !important;
+  -moz-font-feature-settings: "pnum=1", "lnum=1" !important;
+  font-family: "Open Sans", sans-serif;
 }

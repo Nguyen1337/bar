@@ -35,11 +35,13 @@ body {
   line-height: 175%;
   color: #dcca87;
   letter-spacing: 0.04em;
-  font-variant-numeric: lining-nums !important;
 }
 
 * {
   font-variant-numeric: lining-nums !important;
+  font-feature-settings: "pnum" on, "lnum" on !important;
+  -webkit-font-feature-settings: "pnum" on, "lnum" on !important;
+  -moz-font-feature-settings: "pnum=1", "lnum=1" !important;
 }
 
 h1,
@@ -133,10 +135,9 @@ h6 {
 }
 
 .header__line {
-  width: 57px;
-  height: 1px;
-  transform: rotate(90deg);
-  background-image: linear-gradient(to right, transparent, rgb(255, 255, 255), transparent);
+  width: 1px;
+  height: 57px;
+  background-image: linear-gradient(to top, transparent, rgb(255, 255, 255), transparent);
 }
 
 .hero__body {
@@ -176,6 +177,7 @@ h6 {
 
 .hero__title {
   margin-bottom: 32px;
+  text-transform: capitalize;
 }
 
 .hero__text {
@@ -289,7 +291,7 @@ h6 {
   margin-bottom: 64px;
 }
 
-.book select {
+.book__border {
   font-weight: 700;
   width: 412px;
   height: 60px;
@@ -299,6 +301,12 @@ h6 {
   font-size: 16px;
   line-height: 175%;
   border: 1px solid #f5efdb;
+  display: flex;
+  align-items: center;
+}
+
+.book select {
+  width: 100%;
 }
 
 .book select option {
@@ -514,6 +522,7 @@ h6 {
   display: flex;
   flex-wrap: wrap;
   gap: 64px 32px;
+  justify-content: center;
 }
 
 .customers__item {
@@ -598,7 +607,7 @@ h6 {
   max-width: 1300px;
   margin: 0 auto;
   display: flex;
-  gap: 183px;
+  gap: 50px;
   align-items: center;
   justify-content: space-between;
 }
@@ -732,6 +741,7 @@ h6 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 
 .gallery__background {
@@ -749,6 +759,7 @@ h6 {
 .gallery__list {
   display: flex;
   gap: 32px;
+  min-width: 967px;
 }
 
 .gallery__cap {
@@ -787,6 +798,10 @@ h6 {
 
 .gallery__item-wrapper:hover .gallery__image {
   opacity: 0.4;
+}
+
+.gallery__image {
+  min-width: 301px;
 }
 
 .gallery__link {
@@ -919,4 +934,323 @@ h6 {
 
 .footer__copyright {
   color: #aaaaaa;
+}
+
+@media (max-width: 1280px) {
+  .header__nav {
+    display: none;
+  }
+
+  .header__buttons {
+    display: none;
+  }
+
+  .hero__body {
+    gap: 30px;
+    padding-block: 40px 160px;
+  }
+
+  .hero__wrapper {
+    gap: 30px;
+  }
+
+  .today__wrapper {
+    flex-direction: column;
+  }
+
+  .laurels__body {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .laurels__list {
+    display: grid;
+  }
+
+  .footer__body {
+    padding-block: 70px;
+  }
+
+  .footer__list {
+    flex-direction: column;
+  }
+
+  .footer__item:last-child {
+    order: -1;
+    margin-left: 0;
+  }
+
+  .footer__item-center {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1023px) {
+  h1 {
+    font-size: clamp(40px, 9vw, 90px);
+  }
+
+  h2 {
+    font-size: clamp(36px, 5vw, 64px);
+  }
+
+  h3 {
+    font-size: clamp(30px, 4vw, 45px);
+  }
+
+  h4 {
+    font-size: clamp(24px, 3vw, 32px);
+  }
+
+  h5 {
+    font-size: clamp(18px, 3vw, 23px);
+  }
+
+  .header__body {
+    padding-block: 20px;
+  }
+
+  .header__logo a {
+    font-size: 32px;
+  }
+
+  .hero__body {
+    justify-content: center;
+    padding-block: 30px 50px;
+  }
+
+  .hero__wrapper {
+    flex-direction: column-reverse;
+    text-align: center;
+    align-items: center;
+  }
+
+  .knife__body {
+    padding-block: 60px;
+  }
+
+  .book__body {
+    margin-block: 70px;
+  }
+
+  .book__title {
+    margin-bottom: 30px;
+  }
+
+  .book__forms {
+    margin-bottom: 30px;
+  }
+
+  .bar__body {
+    padding-bottom: 160px;
+  }
+
+  .today__body {
+    padding-block: 70px;
+  }
+
+  .today__title {
+    margin-bottom: 40px;
+  }
+
+  .today__wrapper {
+    margin-bottom: 40px;
+  }
+
+  .chef__body {
+    padding-block: 60px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .customers__body {
+    padding-block: 60px;
+  }
+
+  .blog__body {
+    padding-bottom: 70px;
+  }
+
+  .blog__list {
+    margin-bottom: 30px;
+  }
+
+  .blog__cap {
+    justify-content: space-evenly;
+  }
+
+  .gallery__body {
+    margin-left: 0;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .gallery__list {
+    min-width: unset;
+  }
+
+  .footer__body {
+    padding-block: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header__body {
+    padding-block: 10px;
+  }
+
+  .header__logo a {
+    font-size: 28px;
+  }
+
+  .hero__body {
+    padding-block: 30px 30px;
+  }
+
+  .hero__barname {
+    display: none;
+  }
+
+  .knife__body {
+    flex-direction: column;
+    padding-block: 30px;
+  }
+
+  .knife__body::before {
+    display: none;
+  }
+
+  .knife__about {
+    max-width: unset;
+    padding-inline: 20px;
+  }
+
+  .knife__about:first-child {
+    margin-right: 0;
+  }
+
+  .knife__about:last-child {
+    margin-left: 0;
+  }
+
+  .book__body {
+    margin-block: 30px;
+  }
+
+  .book__title {
+    margin-bottom: 20px;
+  }
+
+  .book__forms {
+    margin-bottom: 20px;
+    gap: 30px;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .book__border {
+    width: 100%;
+    height: 50px;
+  }
+
+  .bar__body {
+    padding-bottom: 60px;
+  }
+
+  .bar__nav-list {
+    gap: 30px;
+  }
+
+  .today__body {
+    padding-block: 30px;
+  }
+
+  .today__title {
+    margin-bottom: 30px;
+  }
+
+  .today__wrapper {
+    margin-bottom: 30px;
+  }
+
+  .chef__body {
+    padding-block: 30px;
+  }
+
+  .customers__body {
+    padding-block: 30px 60px;
+  }
+
+  .customers__item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .customers__logo {
+    right: 3%;
+  }
+
+  .laurels__body::after {
+    right: 0;
+  }
+
+  .blog__body {
+    padding-bottom: 30px;
+  }
+
+  .blog__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog__item {
+    align-items: center;
+    text-align: center;
+  }
+
+  .gallery__list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .subscribe__form {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  .subscribe__form input {
+    width: 100%;
+  }
+
+  .footer__body {
+    padding-block: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .book__body {
+    margin-block: 20px;
+  }
+
+  .bar__body {
+    padding-bottom: 30px;
+  }
+
+  .today__title {
+    margin-bottom: 20px;
+  }
+
+  .chef__body {
+    padding-block: 20px;
+  }
+
+  .customers__body {
+    padding-block: 20px 60px;
+  }
+
+  .customers__logo {
+    display: none;
+  }
 }

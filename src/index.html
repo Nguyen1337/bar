@@ -119,24 +119,32 @@
           <h2 class="book__title">Book A Table</h2>
           <form class="book__form" action="submit" method="get">
             <div class="book__forms">
-              <select name="quanty" id="quanty">
-                <option disabled>Number of person</option>
-                <option value="1 person">1 Person</option>
-                <option value="2 person">2 Person</option>
-                <option value="3 person">3 Person</option>
-              </select>
-              <select name="date" id="date">
-                <option disabled>Choose date</option>
-                <option value="31/03/2024">31/03/2024</option>
-                <option value="01/04/2024">01/04/2024</option>
-                <option value="02/04/2024">02/04/2024</option>
-              </select>
-              <select name="time" id="time">
-                <option disabled>Choose time</option>
-                <option value="11:00AM">11:00AM</option>
-                <option value="12:00AM">12:00AM</option>
-                <option value="13:00AM">13:00AM</option>
-              </select>
+              <div class="book__border">
+                <select name="quanty" id="quanty">
+                  <option disabled>Number of person</option>
+                  <option value="1 person">1 Person</option>
+                  <option value="2 person">2 Person</option>
+                  <option value="3 person">3 Person</option>
+                </select>
+              </div>
+
+              <div class="book__border">
+                <select name="date" id="date">
+                  <option disabled>Choose date</option>
+                  <option value="31/03/2024">31/03/2024</option>
+                  <option value="01/04/2024">01/04/2024</option>
+                  <option value="02/04/2024">02/04/2024</option>
+                </select>
+              </div>
+
+              <div class="book__border">
+                <select name="time" id="time">
+                  <option disabled>Choose time</option>
+                  <option value="11:00AM">11:00AM</option>
+                  <option value="12:00AM">12:00AM</option>
+                  <option value="13:00AM">13:00AM</option>
+                </select>
+              </div>
             </div>
             <button class="book__button button" type="submit">Book Now</button>
           </form>
@@ -650,6 +658,8 @@
             <div class="gallery__list">
               <div class="gallery__item-wrapper">
                 <img
+                  width="301"
+                  height="447"
                   src="./images/gallery/1.png"
                   alt=""
                   class="gallery__image"
@@ -671,6 +681,8 @@
               </div>
               <div class="gallery__item-wrapper">
                 <img
+                  width="301"
+                  height="447"
                   src="./images/gallery/2.png"
                   alt=""
                   class="gallery__image"
@@ -692,6 +704,8 @@
               </div>
               <div class="gallery__item-wrapper">
                 <img
+                  width="301"
+                  height="447"
                   src="./images/gallery/3.png"
                   alt=""
                   class="gallery__image"
@@ -710,14 +724,6 @@
                     />
                   </svg>
                 </a>
-              </div>
-              <div class="gallery__item-wrapper">
-                <img
-                  src="./images/gallery/4.png"
-                  alt=""
-                  class="gallery__image"
-                />
-                <a class="gallery__link" href="#"> </a>
               </div>
             </div>
           </div>
