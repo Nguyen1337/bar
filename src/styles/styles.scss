@@ -546,3 +546,104 @@ h6 {
     top: -50px;
   }
 }
+
+.video {
+  background-image: url(../images/rest.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__body {
+    padding-top: 147px;
+    padding-bottom: 321px;
+  }
+
+  &__background {
+    background-color: rgba($color: $color-dark-light, $alpha: 0.4);
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 29px;
+    margin-left: 197px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 120px;
+    aspect-ratio: 1;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid #dcca87;
+  }
+}
+
+.laurels {
+  background-image: url(../images/laurels/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__background {
+    background-color: rgba($color: $color-dark-light, $alpha: 0.6);
+  }
+
+  &__body {
+    position: relative;
+    padding-block: 128px;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    gap: 183px;
+    align-items: center;
+    justify-content: space-between;
+
+    &::after {
+      content: "G";
+      position: absolute;
+      font-size: 600px;
+      color: rgba($color: #fafafa, $alpha: 0.8);
+      font-weight: 700;
+      font-family: $font-family-accent;
+      right: 166px;
+      bottom: 313px;
+    }
+  }
+
+  &__cap {
+    color: $color-light;
+    margin-bottom: 8px;
+  }
+
+  object {
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    margin-bottom: 64px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 64px 32px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    max-width: 301px;
+
+    &-title {
+      margin-bottom: 8px;
+    }
+
+    &-text {
+      color: $color-grey;
+    }
+  }
+}

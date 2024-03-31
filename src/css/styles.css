@@ -541,3 +541,104 @@ h6 {
   right: -20px;
   top: -50px;
 }
+
+.video {
+  background-image: url(../images/rest.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.video__body {
+  padding-top: 147px;
+  padding-bottom: 321px;
+}
+
+.video__background {
+  background-color: rgba(12, 12, 12, 0.4);
+}
+
+.video__logo {
+  display: block;
+  margin-bottom: 29px;
+  margin-left: 197px;
+}
+
+.video__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 120px;
+  aspect-ratio: 1;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid #dcca87;
+}
+
+.laurels {
+  background-image: url(../images/laurels/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.laurels__background {
+  background-color: rgba(12, 12, 12, 0.6);
+}
+
+.laurels__body {
+  position: relative;
+  padding-block: 128px;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  gap: 183px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.laurels__body::after {
+  content: "G";
+  position: absolute;
+  font-size: 600px;
+  color: rgba(250, 250, 250, 0.8);
+  font-weight: 700;
+  font-family: "Cormorant Upright", serif;
+  right: 166px;
+  bottom: 313px;
+}
+
+.laurels__cap {
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.laurels object {
+  margin-bottom: 8px;
+}
+
+.laurels__title {
+  margin-bottom: 64px;
+}
+
+.laurels__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 64px 32px;
+}
+
+.laurels__item {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  max-width: 301px;
+}
+
+.laurels__item-title {
+  margin-bottom: 8px;
+}
+
+.laurels__item-text {
+  color: #aaaaaa;
+}
