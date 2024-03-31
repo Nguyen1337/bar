@@ -6,8 +6,458 @@
     <title>Gericht</title>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header class="header"></header>
+    <header class="header container">
+      <div class="header__body">
+        <p class="header__logo"><a href="index.html">Gerícht</a></p>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">Home</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">Pages</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">Contact Us</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">Blog</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">Landing</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__buttons">
+          <button class="header__button">Log in / registration</button>
+          <hr class="header__line" />
+          <button class="header__button">book table</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero container">
+        <div class="hero__body">
+          <article class="hero__barname">
+            <p>#Gericht</p>
+            <p>#Bar</p>
+          </article>
+          <div class="hero__wrapper">
+            <div class="hero__info">
+              <h5 class="hero__subtitle">Chase the new Flavour</h5>
+              <object
+                data="./images/spoon.svg"
+                type="image/svg+xml"
+                width="40"
+                height="9"
+              ></object>
+              <h1 class="hero__title">The key to Fine dining</h1>
+              <p class="hero__text">
+                Sit tellus lobortis sed senectus vivamus molestie. Condimentum
+                volutpat morbi facilisis quam scelerisque sapien. Et, penatibus
+                aliquam amet tellus
+              </p>
+              <button class="hero__button button" type="button">
+                Explore Menu
+              </button>
+            </div>
+            <img class="hero__image" src="./images/hero.jpg" alt="" />
+          </div>
+        </div>
+      </section>
+      <section class="knife">
+        <div class="container">
+          <div class="knife__body">
+            <div class="knife__about">
+              <h2 class="knife__title">About Us</h2>
+              <object
+                data="./images/spoonleft.svg"
+                type="image/svg+xml"
+              ></object>
+              <p class="knife__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
+                pharetra adipiscing ultrices vulputate posuere tristique. In sed
+                odio nec aliquet eu proin mauris et.
+              </p>
+              <button class="knife__button button" type="button">
+                Know More
+              </button>
+            </div>
+            <img class="knife__image" src="./images/knife.png" alt="" />
+            <div class="knife__about">
+              <h2 class="knife__title">Our History</h2>
+              <object data="./images/spoon.svg" type="image/svg+xml"></object>
+              <p class="knife__text">
+                Adipiscing tempus ullamcorper lobortis odio tellus arcu
+                volutpat. Risus placerat morbi volutpat habitasse interdum mi
+                aliquam In sed odio nec aliquet.
+              </p>
+              <button class="knife__button button" type="button">
+                Know More
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="book container">
+        <div class="book__body">
+          <h5 class="book__subtitle">Reservations</h5>
+          <object
+            data="./images/spoon.svg"
+            type="image/svg+xml"
+            width="40"
+            height="9"
+          ></object>
+          <h2 class="book__title">Book A Table</h2>
+          <form class="book__form" action="submit" method="get">
+            <div class="book__forms">
+              <select name="quanty" id="quanty">
+                <option disabled>Number of person</option>
+                <option value="1 person">1 Person</option>
+                <option value="2 person">2 Person</option>
+                <option value="3 person">3 Person</option>
+              </select>
+              <select name="date" id="date">
+                <option disabled>Choose date</option>
+                <option value="31/03/2024">31/03/2024</option>
+                <option value="01/04/2024">01/04/2024</option>
+                <option value="02/04/2024">02/04/2024</option>
+              </select>
+              <select name="time" id="time">
+                <option disabled>Choose time</option>
+                <option value="11:00AM">11:00AM</option>
+                <option value="12:00AM">12:00AM</option>
+                <option value="13:00AM">13:00AM</option>
+              </select>
+            </div>
+            <button class="book__button button" type="submit">Book Now</button>
+          </form>
+          <img class="book__logo" src="./images/logo.png" alt="" />
+        </div>
+      </section>
+      <section class="bar">
+        <div class="bar__background">
+          <div class="container">
+            <div class="bar__body">
+              <img class="bar__logo" src="./images/logo.png" alt="" />
+              <nav class="bar__nav">
+                <ul class="bar__nav-list">
+                  <li class="bar__nav-item">
+                    <a class="bar__nav-link" href="">Bar Menu</a>
+                  </li>
+                  <li class="bar__nav-item">
+                    <a class="bar__nav-link" href="">Food Menu</a>
+                  </li>
+                  <li class="bar__nav-item">
+                    <a class="bar__nav-link" href="">Desserts Menu</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="today container">
+        <div class="today__body">
+          <h5 class="today__subtitle">Menu that fits you palatte</h5>
+          <object
+            data="./images/spoon.svg"
+            type="image/svg+xml"
+            width="40"
+            height="9"
+          ></object>
+          <h2 class="today__title">Today’s Special</h2>
+          <div class="today__wrapper">
+            <article class="menu">
+              <h3 class="menu__title">Wine & Beer</h3>
+              <nav class="menu__nav">
+                <ul class="menu__nav-list">
+                  <li class="menu__nav-item position">
+                    <div class="position__info">
+                      <h5 class="position__name">Chapel Hill Shiraz</h5>
+                      <span class="position__line"></span>
+                      <h5 class="position__cost">$56</h5>
+                    </div>
+                    <p class="position__about">AU | Bottle</p>
+                  </li>
+                  <li class="menu__nav-item position">
+                    <div class="position__info">
+                      <h5 class="position__name">Catena Malbec</h5>
+                      <span class="position__line"></span>
+                      <h5 class="position__cost">$59</h5>
+                    </div>
+                    <p class="position__about">AR | Bottle</p>
+                  </li>
+                  <li class="menu__nav-item position">
+                    <div class="position__info">
+                      <h5 class="position__name">La Vieille Rosé</h5>
+                      <span class="position__line"></span>
+                      <h5 class="position__cost">$44</h5>
+                    </div>
+                    <p class="position__about">FR | 750 ml</p>
+                  </li>
+                  <li class="menu__nav-item position">
+                    <div class="position__info">
+                      <h5 class="position__name">Rhino Pale Ale</h5>
+                      <span class="position__line"></span>
+                      <h5 class="position__cost">$31</h5>
+                    </div>
+                    <p class="position__about">CA | 750 ml</p>
+                  </li>
+                  <li class="menu__nav-item position">
+                    <div class="position__info">
+                      <h5 class="position__name">Irish Guinness</h5>
+                      <span class="position__line"></span>
+                      <h5 class="position__cost">$26</h5>
+                    </div>
+                    <p class="position__about">IE | 750 ml</p>
+                  </li>
+                </ul>
+              </nav>
+            </article>
+            <img class="today__image" src="./images/coctail.png" alt="" />
+            <article class="menu">
+              <h3 class="menu__title">Cocktails</h3>
+              <nav class="menu__nav">
+                <ul class="menu__nav-list">
+                  <li class="menu__nav-item position">
+                    <div class="position__info">
+                      <h5 class="position__name">Aperol Spritz</h5>
+                      <span class="position__line"></span>
+                      <h5 class="position__cost">$20</h5>
+                    </div>
+                    <p class="position__about">
+                      Aperol | Villa Marchesi prosecco | soda | 30ml
+                    </p>
+                  </li>
+                  <li class="menu__nav-item position">
+                    <div class="position__info">
+                      <h5 class="position__name">Dark 'N' Stormy</h5>
+                      <span class="position__line"></span>
+                      <h5 class="position__cost">$16</h5>
+                    </div>
+                    <p class="position__about">
+                      Dark rum | Ginger beer | Slice of lime.
+                    </p>
+                  </li>
+                  <li class="menu__nav-item position">
+                    <div class="position__info">
+                      <h5 class="position__name">Daiquiri</h5>
+                      <span class="position__line"></span>
+                      <h5 class="position__cost">$10</h5>
+                    </div>
+                    <p class="position__about">Rum | Citrus juice | Sugar</p>
+                  </li>
+                  <li class="menu__nav-item position">
+                    <div class="position__info">
+                      <h5 class="position__name">Old Fashioned</h5>
+                      <span class="position__line"></span>
+                      <h5 class="position__cost">$31</h5>
+                    </div>
+                    <p class="position__about">
+                      Bourbon | Brown sugar | Angostura Bitters
+                    </p>
+                  </li>
+                  <li class="menu__nav-item position">
+                    <div class="position__info">
+                      <h5 class="position__name">Negroni</h5>
+                      <span class="position__line"></span>
+                      <h5 class="position__cost">$26</h5>
+                    </div>
+                    <p class="position__about">
+                      Gin | Sweet Vermouth | Campari | Orange garnish
+                    </p>
+                  </li>
+                </ul>
+              </nav>
+            </article>
+          </div>
+          <button class="today__button button" type="button">View More</button>
+        </div>
+      </section>
+      <section class="chef">
+        <div class="chef__background">
+          <div class="container">
+            <div class="chef__body">
+              <img class="chef__image" src="./images/chef.jpg" alt="" />
+              <div class="chef__info">
+                <h5 class="chef__cap">Chef’s Word</h5>
+                <object
+                  class="chef__spoon"
+                  data="./images/spoon.svg"
+                  type="image/svg+xml"
+                  width="40"
+                  height="9"
+                ></object>
+                <h2 class="chef__title">What we believe in</h2>
+                <div class="chef__says">
+                  <object
+                    data="./images/quote.svg"
+                    type="image/svg+xml"
+                  ></object>
+                  <small class="chef__quote">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    auctor sit .
+                  </small>
+                </div>
+                <p class="chef__quote">
+                  auctor sit iaculis in arcu. Vulputate nulla lobortis mauris
+                  eget sit. Nulla scelerisque scelerisque congue ac consequat,
+                  aliquam molestie lectus eu. Congue iaculis integer curabitur
+                  semper sit nunc.
+                </p>
+                <h4 class="chef__name">Kevin Luo</h4>
+                <div class="chef__post">Chef & Founder</div>
+                <object
+                  class="chef__auto"
+                  width="235"
+                  height="83"
+                  data="./images/authograf.svg"
+                  type="image/svg+xml"
+                ></object>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="customers container">
+        <div class="customers__body">
+          <h5 class="customers__cap">Testimony</h5>
+          <object
+            class="customers__spoon"
+            data="./images/spoon.svg"
+            type="image/svg+xml"
+          ></object>
+          <h2 class="customers__title">Happy customers</h2>
+          <div class="customers__list">
+            <div class="customers__item">
+              <img
+                class="customers__image"
+                src="./images/customers/1.png"
+                alt=""
+              />
+              <div class="customers__info">
+                <p class="customers__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing sit. auctor
+                  sit iaculis in arcu. Vulputate nulla lobortis mauris eget sit.
+                  Nulla scelerisque scelerisque congue.
+                </p>
+                <h4 class="customers__name">Wade Warren</h4>
+                <p class="customers__post">Sommelier</p>
+              </div>
+              <svg
+                class="customers__quote"
+                width="47"
+                height="40"
+                viewBox="0 0 47 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.9137 22.8571C15.3163 22.8571 17.2183 23.6592 18.6198 25.2632C20.1214 26.7669 20.8722 28.7719 20.8722 31.2782C20.8722 33.985 19.9712 36.1404 18.1693 37.7444C16.4675 39.2481 14.115 40 11.1118 40C7.60809 40 4.85517 38.6466 2.85304 35.9399C0.951012 33.2331 0 29.3734 0 24.3609C0 19.8496 1.00107 15.6892 3.00319 11.8797C5.00533 7.96992 8.00852 4.06015 12.0128 0.150374C12.1129 0.0501247 12.263 0 12.4633 0C12.7636 0 13.0138 0.150374 13.2141 0.451122C13.4143 0.751876 13.4143 1.0025 13.2141 1.203C8.30884 6.21553 5.85623 12.1303 5.85623 18.9474C5.85623 21.7544 6.35676 23.8095 7.35783 25.1128C8.25879 23.609 10.1108 22.8571 12.9137 22.8571ZM39.0415 22.8571C41.4441 22.8571 43.3461 23.6592 44.7476 25.2632C46.2492 26.7669 47 28.7719 47 31.2782C47 33.985 46.099 36.1404 44.2971 37.7444C42.5953 39.2481 40.2428 40 37.2396 40C33.7359 40 30.983 38.6466 28.9808 35.9399C27.0788 33.2331 26.1278 29.3734 26.1278 24.3609C26.1278 19.8496 27.1289 15.6892 29.131 11.8797C31.1331 7.96992 34.1363 4.06015 38.1406 0.150374C38.2407 0.0501247 38.3908 0 38.5911 0C38.8914 0 39.1416 0.150374 39.3419 0.451122C39.5421 0.751876 39.5421 1.0025 39.3419 1.203C34.4366 6.21553 31.984 12.1303 31.984 18.9474C31.984 21.7544 32.4846 23.8095 33.4856 25.1128C34.3866 23.609 36.2386 22.8571 39.0415 22.8571Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div class="customers__item">
+              <img
+                class="customers__image"
+                src="./images/customers/2.png"
+                alt=""
+              />
+              <div class="customers__info">
+                <p class="customers__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing sit. auctor
+                  sit iaculis in arcu. Vulputate nulla lobortis mauris eget sit.
+                  Nulla scelerisque scelerisque congue.
+                </p>
+                <h4 class="customers__name">Jane Cooper</h4>
+                <p class="customers__post">Chef</p>
+              </div>
+              <svg
+                class="customers__quote"
+                width="47"
+                height="40"
+                viewBox="0 0 47 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.9137 22.8571C15.3163 22.8571 17.2183 23.6592 18.6198 25.2632C20.1214 26.7669 20.8722 28.7719 20.8722 31.2782C20.8722 33.985 19.9712 36.1404 18.1693 37.7444C16.4675 39.2481 14.115 40 11.1118 40C7.60809 40 4.85517 38.6466 2.85304 35.9399C0.951012 33.2331 0 29.3734 0 24.3609C0 19.8496 1.00107 15.6892 3.00319 11.8797C5.00533 7.96992 8.00852 4.06015 12.0128 0.150374C12.1129 0.0501247 12.263 0 12.4633 0C12.7636 0 13.0138 0.150374 13.2141 0.451122C13.4143 0.751876 13.4143 1.0025 13.2141 1.203C8.30884 6.21553 5.85623 12.1303 5.85623 18.9474C5.85623 21.7544 6.35676 23.8095 7.35783 25.1128C8.25879 23.609 10.1108 22.8571 12.9137 22.8571ZM39.0415 22.8571C41.4441 22.8571 43.3461 23.6592 44.7476 25.2632C46.2492 26.7669 47 28.7719 47 31.2782C47 33.985 46.099 36.1404 44.2971 37.7444C42.5953 39.2481 40.2428 40 37.2396 40C33.7359 40 30.983 38.6466 28.9808 35.9399C27.0788 33.2331 26.1278 29.3734 26.1278 24.3609C26.1278 19.8496 27.1289 15.6892 29.131 11.8797C31.1331 7.96992 34.1363 4.06015 38.1406 0.150374C38.2407 0.0501247 38.3908 0 38.5911 0C38.8914 0 39.1416 0.150374 39.3419 0.451122C39.5421 0.751876 39.5421 1.0025 39.3419 1.203C34.4366 6.21553 31.984 12.1303 31.984 18.9474C31.984 21.7544 32.4846 23.8095 33.4856 25.1128C34.3866 23.609 36.2386 22.8571 39.0415 22.8571Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div class="customers__item">
+              <img
+                class="customers__image"
+                src="./images/customers/3.png"
+                alt=""
+              />
+              <div class="customers__info">
+                <p class="customers__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing sit. auctor
+                  sit iaculis in arcu. Vulputate nulla lobortis mauris eget sit.
+                  Nulla scelerisque scelerisque congue.
+                </p>
+                <h4 class="customers__name">Robert Fox</h4>
+                <p class="customers__post">Chef</p>
+              </div>
+              <svg
+                class="customers__quote"
+                width="47"
+                height="40"
+                viewBox="0 0 47 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.9137 22.8571C15.3163 22.8571 17.2183 23.6592 18.6198 25.2632C20.1214 26.7669 20.8722 28.7719 20.8722 31.2782C20.8722 33.985 19.9712 36.1404 18.1693 37.7444C16.4675 39.2481 14.115 40 11.1118 40C7.60809 40 4.85517 38.6466 2.85304 35.9399C0.951012 33.2331 0 29.3734 0 24.3609C0 19.8496 1.00107 15.6892 3.00319 11.8797C5.00533 7.96992 8.00852 4.06015 12.0128 0.150374C12.1129 0.0501247 12.263 0 12.4633 0C12.7636 0 13.0138 0.150374 13.2141 0.451122C13.4143 0.751876 13.4143 1.0025 13.2141 1.203C8.30884 6.21553 5.85623 12.1303 5.85623 18.9474C5.85623 21.7544 6.35676 23.8095 7.35783 25.1128C8.25879 23.609 10.1108 22.8571 12.9137 22.8571ZM39.0415 22.8571C41.4441 22.8571 43.3461 23.6592 44.7476 25.2632C46.2492 26.7669 47 28.7719 47 31.2782C47 33.985 46.099 36.1404 44.2971 37.7444C42.5953 39.2481 40.2428 40 37.2396 40C33.7359 40 30.983 38.6466 28.9808 35.9399C27.0788 33.2331 26.1278 29.3734 26.1278 24.3609C26.1278 19.8496 27.1289 15.6892 29.131 11.8797C31.1331 7.96992 34.1363 4.06015 38.1406 0.150374C38.2407 0.0501247 38.3908 0 38.5911 0C38.8914 0 39.1416 0.150374 39.3419 0.451122C39.5421 0.751876 39.5421 1.0025 39.3419 1.203C34.4366 6.21553 31.984 12.1303 31.984 18.9474C31.984 21.7544 32.4846 23.8095 33.4856 25.1128C34.3866 23.609 36.2386 22.8571 39.0415 22.8571Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div class="customers__item">
+              <img
+                class="customers__image"
+                src="./images/customers/4.png"
+                alt=""
+              />
+              <div class="customers__info">
+                <p class="customers__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing sit. auctor
+                  sit iaculis in arcu. Vulputate nulla lobortis mauris eget sit.
+                  Nulla scelerisque scelerisque congue.
+                </p>
+                <h4 class="customers__name">Brooklyn Simmons</h4>
+                <p class="customers__post">Caterer</p>
+              </div>
+              <svg
+                class="customers__quote"
+                width="47"
+                height="40"
+                viewBox="0 0 47 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.9137 22.8571C15.3163 22.8571 17.2183 23.6592 18.6198 25.2632C20.1214 26.7669 20.8722 28.7719 20.8722 31.2782C20.8722 33.985 19.9712 36.1404 18.1693 37.7444C16.4675 39.2481 14.115 40 11.1118 40C7.60809 40 4.85517 38.6466 2.85304 35.9399C0.951012 33.2331 0 29.3734 0 24.3609C0 19.8496 1.00107 15.6892 3.00319 11.8797C5.00533 7.96992 8.00852 4.06015 12.0128 0.150374C12.1129 0.0501247 12.263 0 12.4633 0C12.7636 0 13.0138 0.150374 13.2141 0.451122C13.4143 0.751876 13.4143 1.0025 13.2141 1.203C8.30884 6.21553 5.85623 12.1303 5.85623 18.9474C5.85623 21.7544 6.35676 23.8095 7.35783 25.1128C8.25879 23.609 10.1108 22.8571 12.9137 22.8571ZM39.0415 22.8571C41.4441 22.8571 43.3461 23.6592 44.7476 25.2632C46.2492 26.7669 47 28.7719 47 31.2782C47 33.985 46.099 36.1404 44.2971 37.7444C42.5953 39.2481 40.2428 40 37.2396 40C33.7359 40 30.983 38.6466 28.9808 35.9399C27.0788 33.2331 26.1278 29.3734 26.1278 24.3609C26.1278 19.8496 27.1289 15.6892 29.131 11.8797C31.1331 7.96992 34.1363 4.06015 38.1406 0.150374C38.2407 0.0501247 38.3908 0 38.5911 0C38.8914 0 39.1416 0.150374 39.3419 0.451122C39.5421 0.751876 39.5421 1.0025 39.3419 1.203C34.4366 6.21553 31.984 12.1303 31.984 18.9474C31.984 21.7544 32.4846 23.8095 33.4856 25.1128C34.3866 23.609 36.2386 22.8571 39.0415 22.8571Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <img class="customers__logo" src="./images/logo.png" alt="" />
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
