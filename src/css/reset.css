@@ -108,3 +108,7 @@ label {
 legend {
   display: block;
 }
+
+option {
+  font-variant-numeric: inherit !important;
+}

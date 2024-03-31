@@ -11,6 +11,11 @@ body {
   line-height: 175%;
   color: $color-accent;
   letter-spacing: 0.04em;
+  font-variant-numeric: lining-nums !important;
+}
+
+* {
+  font-variant-numeric: lining-nums !important;
 }
 
 h1,
@@ -645,5 +650,272 @@ h6 {
     &-text {
       color: $color-grey;
     }
+  }
+}
+
+.blog {
+  &__body {
+    position: relative;
+    padding-bottom: 152px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    margin-bottom: 64px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+  }
+
+  &__cap {
+    color: $color-light;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    text-transform: capitalize;
+
+    &-link {
+      color: $color-accent;
+      transition: text-decoration 0.2s ease-in;
+
+      &:hover {
+        text-decoration: underline 1px;
+        text-underline-offset: 3px;
+      }
+    }
+  }
+
+  &__text {
+    color: $color-grey;
+  }
+
+  &__link {
+    color: $color-accent;
+    transition: text-decoration 0.2s ease-in;
+
+    &:hover {
+      text-decoration: underline 1px;
+      text-underline-offset: 3px;
+    }
+  }
+
+  &__button {
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    position: absolute;
+    right: -100px;
+    transform: translateX(-50%);
+    bottom: 50px;
+  }
+}
+
+.gallery {
+  background-image: url(../images/gallery/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__background {
+    background-color: rgba($color: $color-dark-light, $alpha: 0.6);
+  }
+
+  &__body {
+    padding-block: 129px;
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    margin-left: 310px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 32px;
+  }
+
+  &__cap {
+    color: $color-light;
+    margin-bottom: 8px;
+  }
+
+  object {
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    color: $color-grey;
+    margin-bottom: 24px;
+  }
+
+  &__info {
+    max-width: 491px;
+  }
+
+  &__item-wrapper {
+    position: relative;
+
+    &:hover {
+      background-color: rgba($color: $color-dark-light, $alpha: 0.6);
+
+      .gallery__link {
+        display: block;
+      }
+
+      .gallery__image {
+        opacity: 0.4;
+      }
+    }
+  }
+
+  &__link {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.subscribe {
+  &__body {
+    padding-block: 113px 128px;
+    max-width: 1300px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__cap {
+    color: $color-light;
+    margin-bottom: 8px;
+  }
+
+  object {
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    color: $color-light;
+    margin-bottom: 64px;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+
+    input {
+      height: 60px;
+      border: 1px solid #f5efdb;
+      width: 635px;
+      padding-inline: 19px;
+
+      &::placeholder {
+        color: $color-grey;
+      }
+    }
+  }
+}
+
+.footer {
+  background-image: url(../images/footerbg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__background {
+    background-color: rgba($color: $color-dark-light, $alpha: 0.6);
+  }
+
+  &__body {
+    padding-block: 128px;
+    max-width: 1300px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 64px;
+  }
+
+  &__logo {
+    font-family: $font-family-accent;
+    text-transform: uppercase;
+    color: #dcca87;
+    font-size: 64px;
+    line-height: 130%;
+    margin-bottom: 32px;
+  }
+
+  &__subtitle {
+    color: #f5efdb;
+    margin-bottom: 24px;
+  }
+
+  &__item {
+    margin-top: 25px;
+
+    &:last-child {
+      margin-left: 100px;
+    }
+
+    &-center {
+      max-width: 438px;
+    }
+  }
+
+  &__text {
+    color: $color-light;
+    margin-bottom: 16px;
+  }
+
+  object {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  &__adress,
+  &__phone,
+  &__working {
+    color: $color-grey;
+    margin-bottom: 8px;
+  }
+
+  &__media {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  &__copyright {
+    color: $color-grey;
   }
 }
