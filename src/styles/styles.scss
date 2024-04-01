@@ -974,6 +974,10 @@ h6 {
     right: -100px;
     transform: translateX(-50%);
     bottom: 50px;
+
+    @include mobile-s {
+      display: none;
+    }
   }
 }
 

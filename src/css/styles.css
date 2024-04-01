@@ -1253,4 +1253,8 @@ h6 {
   .customers__logo {
     display: none;
   }
+
+  .blog__logo {
+    display: none;
+  }
 }
